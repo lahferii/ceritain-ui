@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .card {
+    @apply w-full bg-gradient-to-br from-gray-50 dark:from-slate-600 dark:to-slate-700 to-gray-200 rounded shadow p-5 mb-5 duration-300
+  }
+  .text-content {
+    @apply text-slate-800 leading-relaxed duration-300 dark:text-slate-100 tracking-wider
+  }
+  .text-secondary {
+    @apply text-slate-600 dark:text-slate-300 text-sm tracking-wider duration-300
+  }
+  .input {
+    @apply w-full px-4 py-2 bg-gray-50 dark:bg-slate-600 tracking-wider placeholder:text-slate-500 dark:placeholder:text-slate-400 dark:text-white focus:outline-none focus:ring-2 ring-slate-800 dark:ring-slate-200 rounded duration-300
+  }
+  .long-text {
+    @apply w-full h-40 px-4 py-2 bg-gray-50 dark:bg-slate-600 tracking-wider placeholder:text-slate-500 dark:placeholder:text-slate-400 dark:text-white focus:outline-none focus:ring-2 ring-slate-800 dark:ring-slate-200 rounded scrollbar-thin scrollbar-thumb-slate-800 dark:scrollbar-thumb-slate-200 scrollbar-track-gray-50 dark:scrollbar-track-slate-600 duration-300
+  }
+}
