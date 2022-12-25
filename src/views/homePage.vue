@@ -4,7 +4,7 @@
   export default {
     components:{
       cardPart,
-    }  
+    }
   }
 </script>
 

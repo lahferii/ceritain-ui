@@ -1,12 +1,16 @@
 <script>
   import axios from 'axios';
+  import greetingPart from '../components/greetingPart.vue';
 
   export default {
+    components:{
+      greetingPart,
+    },
     data(){
       return{
         post: {
-          writter: '',
-          article: '',
+          writter: "",
+          article: "",
         }
       }
     },
@@ -14,22 +18,23 @@
       uploadCerita(){
         if (this.post.writter.length < 1 && this.post.article.length < 1) {
           alert('jangan males ngetik dong!')
-        } else {
-          let infoCerita = {
-            writter: this.post.writter,
+        }
+
+        let infoCerita = {
+          writter: this.post.writter,
           article: this.post.article,
         };
-
-        axios.post('http://127.0.0.1:8000/api/upload', infoCerita)
-             .then(() =>this.$router.push('/'))
+        axios.post('https://ceritain-api.000webhostapp.com/api/upload', infoCerita)
+             .then(() => this.$router.push('/'))
              .catch(err => console.log(err));
-        }
       }
     }
   }
 </script>
 <template>
   <section>
+    <greeting-part/>
+    
     <div>
       <div class="mb-5">
         <label for="username" class="block mb-2 tracking-wider dark:text-white duration-300">Nama Pengirim</label>
