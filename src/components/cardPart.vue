@@ -9,7 +9,7 @@
       }
     },
     mounted(){
-      axios.get('http://ceritain-api.000webhostapp.com/api/posts')
+      axios.get('https://ceritain-api.000webhostapp.com/api/posts')
            .then(res => (this.posts = res.data.data))
            .catch(err => console.log(err))
     },
